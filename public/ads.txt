@@ -1,0 +1,5 @@
+# Google AdSense Authorized Digital Sellers
+# Domain: digitexaai.in
+# Technical Desk: admin@digitexaai.in
+
+google.com, pub-1029384756102938, DIRECT, f08c47fec0942fa0
