@@ -1,8 +1,47 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ArrowRight, Server, Globe, Megaphone, CheckCircle } from 'lucide-react';
 import heroImg from '../assets/hero.png';
+import gsap from 'gsap';
 
 export default function Home({ setPage }) {
+  const heroRef = useRef(null);
+  const taglineRef = useRef(null);
+  const headingRef = useRef(null);
+  const descRef = useRef(null);
+  const ctaRef = useRef(null);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    tl.fromTo(taglineRef.current,
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6 }
+    )
+    .fromTo(headingRef.current,
+      { y: 40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.7 },
+      '-=0.3'
+    )
+    .fromTo(descRef.current,
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6 },
+      '-=0.3'
+    )
+    .fromTo(ctaRef.current,
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5 },
+      '-=0.2'
+    )
+    .fromTo(imageRef.current,
+      { x: 60, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.8, ease: 'power2.out' },
+      '-=0.4'
+    );
+
+    return () => tl.kill();
+  }, []);
+
   const handleGetStarted = (e) => {
     e.preventDefault();
     window.location.hash = '#/contact-us';
@@ -17,18 +56,18 @@ export default function Home({ setPage }) {
   };
 
   return (
-    <div className="animate-fade-in">
+    <div className="animate-fade-in" ref={heroRef}>
       {/* Hero Section */}
       <section className="container hero-grid">
         <div className="hero-section">
-          <div className="hero-tagline">Digitexa AI Studio</div>
-          <h1 className="hero-heading">
+          <div className="hero-tagline" ref={taglineRef}>Digitexa AI Studio</div>
+          <h1 className="hero-heading" ref={headingRef}>
             Elevate Your Brand With <span className="gradient-text">Intelligent Digital Solutions</span>
           </h1>
-          <p className="hero-desc">
+          <p className="hero-desc" ref={descRef}>
             Digitexa AI crafts premium digital experiences and automated workflows that scale your business while you sleep.
           </p>
-          <div className="hero-ctas">
+          <div className="hero-ctas" ref={ctaRef}>
             <a href="#/contact-us" className="btn btn-primary" onClick={handleGetStarted}>
               Get Started
               <ArrowRight size={18} />
@@ -38,7 +77,7 @@ export default function Home({ setPage }) {
             </button>
           </div>
         </div>
-        <div className="hero-image-wrap animate-fade-in-up">
+        <div className="hero-image-wrap" ref={imageRef}>
           <img src={heroImg} alt="Digitexa AI Future Tech Solutions" className="hero-image" />
         </div>
       </section>
