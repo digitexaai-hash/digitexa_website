@@ -39,7 +39,7 @@ function App() {
   // Developer Console Easter Egg (Signature from human dev)
   useEffect(() => {
     console.log(
-      "%cDigitexa AI %c- Handcrafted Web Solutions\n%cHello developer! Inspecting our DOM? This site was custom coded in React & Vanilla CSS by our engineering desk. Zero templates, maximum speed.%c\n\nQuestions? Reach us at hello@digitexaai.in",
+      "%cDigitexa AI %c- Handcrafted Web Solutions\n%cHello developer! Inspecting our DOM? This site was custom coded in React & Vanilla CSS by our engineering desk. Zero templates, maximum speed.%c\n\nQuestions? Reach us at info@digitexaai.in",
       "color: #3b82f6; font-size: 20px; font-weight: 800; font-family: 'Outfit', sans-serif;",
       "color: #10b981; font-size: 14px; font-weight: 600;",
       "color: #94a3b8; font-size: 12px; line-height: 1.5;",
@@ -223,7 +223,7 @@ function App() {
                 Digitexa AI
                 <span className="logo-dot"></span>
               </a>
-              <p>Crafting premium digital experiences and automated workflows that scale your business while you sleep.</p>
+              <p>Delivering scalable web, marketing, infrastructure, and security solutions for forward-thinking businesses.</p>
             </div>
             
             <div className="footer-links">
@@ -248,7 +248,7 @@ function App() {
           </div>
 
           <div className="footer-bottom">
-            <p>Copyright &copy; 2026 Digitexa AI. Handcrafted with ❤️ by the Digitexa Engineering Team.</p>
+            <p>&copy; 2026 Digitexa AI. All rights reserved. Built with care by the Digitexa Engineering Team.</p>
             <p style={{ display: 'flex', gap: '16px' }}>
               <a href="#/privacy-policy">Privacy Terms</a>
               <span>•</span>

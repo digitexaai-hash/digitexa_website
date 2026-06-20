@@ -209,13 +209,30 @@ export default function Blogs() {
   return (
     <div className="container animate-fade-in" style={{ paddingBottom: '60px' }}>
       {/* Page Title Header */}
-      <div className="section-title-wrap">
-        <div className="hero-tagline">Company Insights</div>
-        <h1 className="section-title">Knowledge Base & Blog</h1>
-        <p className="section-desc">
-          Stay ahead of the curve with expert guides on network configurations, web optimizations, system automations, and search engines.
-        </p>
-      </div>
+      <section className="hero-grid" style={{ marginBottom: '48px' }}>
+        <div className="hero-section">
+          <div className="hero-tagline">Industry Perspectives & Updates</div>
+          <h1 className="section-title" style={{ fontSize: '2.75rem' }}>Insights, Trends & <br /><span className="gradient-text">Tech Stories</span></h1>
+          <p className="section-desc" style={{ marginLeft: 0 }}>
+            Explore expert perspectives, practical guides, and industry insights on web technologies, digital growth, cybersecurity, cloud solutions, and modern IT infrastructure.
+          </p>
+        </div>
+        <div className="glass-card" style={{ padding: '32px', textAlign: 'center', border: '1px solid var(--border-glow)' }}>
+          <div style={{ background: 'linear-gradient(135deg, #f59e0b, #ec4899)', borderRadius: '16px', width: '72px', height: '72px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', margin: '0 auto 20px' }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <h3 style={{ fontSize: '1.25rem', marginBottom: '12px' }}>Curated Knowledge</h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Web Dev</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>AI Automation</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Cybersecurity</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Cloud</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Infrastructure</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Digital Growth</span>
+          </div>
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '20px' }}>Actionable insights written by practitioners, for builders and decision-makers.</p>
+        </div>
+      </section>
 
       {/* Top Leaderboard Ad Slot */}
       <AdSenseAd simulatedType="leaderboard" slot="1234567890" />

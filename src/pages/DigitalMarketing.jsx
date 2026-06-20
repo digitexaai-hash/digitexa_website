@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Megaphone, Search, Share2, Compass, CheckCircle2, TrendingUp } from 'lucide-react';
+import { Megaphone, Search, Share2, Compass, CheckCircle2, TrendingUp, ShoppingCart, Play, MapPin } from 'lucide-react';
 
 export default function DigitalMarketing() {
   const [selectedChart, setSelectedChart] = useState('ctr');
@@ -36,13 +36,30 @@ export default function DigitalMarketing() {
 
   return (
     <div className="container animate-fade-in">
-      <div className="section-title-wrap">
-        <div className="hero-tagline">Marketing Services</div>
-        <h1 className="section-title">Digital Marketing Solutions</h1>
-        <p className="section-desc">
-          Strategic growth services engineered to acquire, engage, and retain customers through data-backed methodologies.
-        </p>
-      </div>
+      <section className="hero-grid" style={{ marginBottom: '60px' }}>
+        <div className="hero-section">
+          <div className="hero-tagline">Marketing Services</div>
+          <h1 className="section-title" style={{ fontSize: '2.75rem' }}>Digital Marketing <br /><span className="gradient-text">Solutions</span></h1>
+          <p className="section-desc" style={{ marginLeft: 0 }}>
+            Strategic growth services engineered to acquire, engage, and retain customers through data-backed methodologies.
+          </p>
+        </div>
+        <div className="glass-card" style={{ padding: '32px', textAlign: 'center', border: '1px solid var(--border-glow)' }}>
+          <div style={{ background: 'linear-gradient(135deg, #ec4899, #8b5cf6)', borderRadius: '16px', width: '72px', height: '72px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', margin: '0 auto 20px' }}>
+            <Megaphone size={32} />
+          </div>
+          <h3 style={{ fontSize: '1.25rem', marginBottom: '12px' }}>Data-Driven Approach</h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>SEO</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>PPC</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Social Media</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Content</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Analytics</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Conversion</span>
+          </div>
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '20px' }}>Every campaign is built on measurable KPIs, real-time tracking, and continuous optimization.</p>
+        </div>
+      </section>
 
       {/* Services breakdown grid */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px', marginBottom: '60px' }}>
@@ -88,6 +105,78 @@ export default function DigitalMarketing() {
           <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
             Create data-informed articles, newsletters, and copy funnels written to convert readers into brand advocates.
           </p>
+        </div>
+      </div>
+
+      {/* Google Marketing Services */}
+      <div style={{ marginBottom: '60px' }}>
+        <div className="section-title-wrap" style={{ padding: 0, marginBottom: '32px' }}>
+          <h2 className="section-title">Google Marketing Services</h2>
+          <p className="section-desc">
+            Full-spectrum Google solutions to maximize your online visibility and drive measurable results.
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px' }}>
+          <div className="glass-card" style={{ padding: '32px', textAlign: 'left' }}>
+            <div className="service-icon-wrap" style={{ color: '#4285F4' }}>
+              <Search size={24} />
+            </div>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>Google Ads (Search & Display)</h3>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              Targeted search and display campaigns engineered to capture high-intent traffic across the Google Network with optimized bidding and ad extensions.
+            </p>
+          </div>
+
+          <div className="glass-card" style={{ padding: '32px', textAlign: 'left' }}>
+            <div className="service-icon-wrap" style={{ color: '#4285F4' }}>
+              <Megaphone size={24} />
+            </div>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>Google Business Profile</h3>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              Optimize and manage your Google Business Profile to appear in local search results and Google Maps, driving foot traffic and local inquiries.
+            </p>
+          </div>
+
+          <div className="glass-card" style={{ padding: '32px', textAlign: 'left' }}>
+            <div className="service-icon-wrap" style={{ color: '#4285F4' }}>
+              <TrendingUp size={24} />
+            </div>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>Google Analytics & Tag Manager</h3>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              Implement precise tracking setups with GA4 and GTM to measure campaign performance, user behavior, and conversion events with accuracy.
+            </p>
+          </div>
+
+          <div className="glass-card" style={{ padding: '32px', textAlign: 'left' }}>
+            <div className="service-icon-wrap" style={{ color: '#4285F4' }}>
+              <ShoppingCart size={24} />
+            </div>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>Google Shopping Ads</h3>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              Showcase your products directly in search results with optimized product feeds, Merchant Center management, and smart shopping campaigns.
+            </p>
+          </div>
+
+          <div className="glass-card" style={{ padding: '32px', textAlign: 'left' }}>
+            <div className="service-icon-wrap" style={{ color: '#4285F4' }}>
+              <Play size={24} />
+            </div>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>YouTube Advertising</h3>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              Reach your audience with targeted video campaigns on YouTube using in-stream ads, bumper ads, and discovery ads optimized for conversions.
+            </p>
+          </div>
+
+          <div className="glass-card" style={{ padding: '32px', textAlign: 'left' }}>
+            <div className="service-icon-wrap" style={{ color: '#4285F4' }}>
+              <MapPin size={24} />
+            </div>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>Google Local Services Ads</h3>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              Get your business in front of local customers actively searching for services you offer, with pay-per-lead pricing and Google screened verification.
+            </p>
+          </div>
         </div>
       </div>
 

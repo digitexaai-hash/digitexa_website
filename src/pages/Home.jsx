@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import { ArrowRight, Server, Globe, Megaphone, CheckCircle } from 'lucide-react';
-import heroImg from '../assets/hero.png';
+import { ArrowRight, Server, Globe, Megaphone, Shield } from 'lucide-react';
+import homeImg from '../assets/home.jpg';
 import gsap from 'gsap';
 
 export default function Home({ setPage }) {
@@ -62,10 +62,10 @@ export default function Home({ setPage }) {
         <div className="hero-section">
           <div className="hero-tagline" ref={taglineRef}>Digitexa AI Studio</div>
           <h1 className="hero-heading" ref={headingRef}>
-            Elevate Your Brand With <span className="gradient-text">Intelligent Digital Solutions</span>
+            Elevate Your Business With <span className="gradient-text">Intelligent Digital Solutions</span>
           </h1>
           <p className="hero-desc" ref={descRef}>
-            Digitexa AI crafts premium digital experiences and automated workflows that scale your business while you sleep.
+            Digitexa delivers end-to-end technology solutions—from website design and digital marketing to IT infrastructure and cybersecurity—helping businesses grow, operate efficiently, and stay secure in an evolving digital landscape.
           </p>
           <div className="hero-ctas" ref={ctaRef}>
             <a href="#/contact-us" className="btn btn-primary" onClick={handleGetStarted}>
@@ -78,113 +78,41 @@ export default function Home({ setPage }) {
           </div>
         </div>
         <div className="hero-image-wrap" ref={imageRef}>
-          <img src={heroImg} alt="Digitexa AI Future Tech Solutions" className="hero-image" />
+          <img src={homeImg} alt="Digitexa AI Future Tech Solutions" className="hero-image" />
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services-section" className="container" style={{ padding: '60px 0' }}>
+      <section id="services-section" className="container" style={{ padding: '60px 0 80px' }}>
         <div className="section-title-wrap">
-          <h2 className="section-title">Digital Services Redefined</h2>
+          <div className="hero-tagline">What We Do</div>
+          <h2 className="section-title">Built for <span className="gradient-text">Performance & Scale</span></h2>
           <p className="section-desc">
-            We combine human creativity with AI precision to deliver results that matter.
+            End-to-end digital services engineered for modern businesses.
           </p>
         </div>
 
         <div className="services-grid">
-          {/* Card 1: Web Design */}
-          <div className="glass-card service-card">
-            <div className="service-icon-wrap">
-              <Globe size={28} />
-            </div>
-            <h3>Web Design & Development</h3>
-            <p>
-              High-performance, custom-coded web architectures that load instantly and drive conversion. Built using React and modern lightweight frameworks.
-            </p>
-            <a href="#/website-solutions" className="service-learn-more">
-              Website Solutions
-              <ArrowRight size={16} />
-            </a>
-          </div>
-
-          {/* Card 2: Digital Marketing */}
-          <div className="glass-card service-card">
-            <div className="service-icon-wrap">
-              <Megaphone size={28} />
-            </div>
-            <h3>Digital Marketing</h3>
-            <p>
-              Strategic search engine optimization, paid media campaigns, and structured social media strategies designed to acquire customers efficiently.
-            </p>
-            <a href="#/digital-marketing" className="service-learn-more">
-              Marketing Strategy
-              <ArrowRight size={16} />
-            </a>
-          </div>
-
-          {/* Card 3: IT Infrastructure */}
-          <div className="glass-card service-card">
-            <div className="service-icon-wrap">
-              <Server size={28} />
-            </div>
-            <h3>IT Infrastructure Services</h3>
-            <p>
-              Shopfloor networks, virtualization servers (Proxmox/Hyper-V), structured backups, and firewall configurations built specifically for SMBs and Manufacturing plants.
-            </p>
-            <a href="#/it-infrastructure" className="service-learn-more">
-              Infrastructure Setup
-              <ArrowRight size={16} />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="container" style={{ padding: '40px 0 80px' }}>
-        <div className="section-title-wrap">
-          <h2 className="section-title">Why Choose Digitexa AI?</h2>
-          <p className="section-desc">
-            We build for performance, security, and long-term scalability.
-          </p>
-        </div>
-
-        <div className="features-grid">
-          <div className="features-list" style={{ marginTop: 0 }}>
-            <div className="feature-item">
-              <CheckCircle className="feature-check-icon" size={24} />
-              <div className="feature-info">
-                <h4>Modern Architecture</h4>
-                <p>No bloated WordPress code. We deliver lightning-fast static builds and modular React setups.</p>
+          {[
+            { icon: <Globe size={28} />, color: '#3b82f6', title: 'Website Design & Development', desc: 'Modern, responsive websites designed for performance, user engagement, and long-term business growth.', link: '#/website-solutions', label: 'Explore Web Solutions' },
+            { icon: <Megaphone size={28} />, color: '#ec4899', title: 'Digital Marketing', desc: 'Strategic SEO, social media, and online marketing solutions that increase visibility and generate qualified leads.', link: '#/digital-marketing', label: 'View Marketing Services' },
+            { icon: <Server size={28} />, color: '#10b981', title: 'IT Infrastructure Support', desc: 'Reliable infrastructure management, network support, cloud solutions, and proactive monitoring to keep your business running efficiently.', link: '#/it-infrastructure', label: 'Infrastructure Services' },
+            { icon: <Shield size={28} />, color: '#8b5cf6', title: 'IT Security Services', desc: 'Advanced cybersecurity solutions that protect your systems, data, and operations from modern digital threats.', link: '#/it-infrastructure', label: 'Security Solutions' }
+          ].map((item, i) => (
+            <div key={i} className="glass-card service-card" style={{ transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.3)' }}
+              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '' }}>
+              <div className="service-icon-wrap" style={{ color: item.color, borderColor: `${item.color}33` }}>
+                {item.icon}
               </div>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+              <a href={item.link} className="service-learn-more">
+                {item.label}
+                <ArrowRight size={16} />
+              </a>
             </div>
-
-            <div className="feature-item">
-              <CheckCircle className="feature-check-icon" size={24} />
-              <div className="feature-info">
-                <h4>Telemetry & Monitoring</h4>
-                <p>We configure background system agents to track memory pool levels, processor loads, and backup validations 24/7.</p>
-              </div>
-            </div>
-
-            <div className="feature-item">
-              <CheckCircle className="feature-check-icon" size={24} />
-              <div className="feature-info">
-                <h4>Built-in SEO Practices</h4>
-                <p>Proper title hierarchies, lightning page speeds, meta tags, and structured schema markup standard on every project.</p>
-              </div>
-            </div>
-
-            <div className="feature-item">
-              <CheckCircle className="feature-check-icon" size={24} />
-              <div className="feature-info">
-                <h4>Transparent Analytics</h4>
-                <p>Track your conversions, organic page views, and client sign-ups through custom lightweight reporting boards.</p>
-              </div>
-            </div>
-          </div>
-          <div className="hero-image-wrap">
-            <img src="/it_server_diagnostics.png" alt="Server Operations Monitoring Diagnostics" className="hero-image" />
-          </div>
+          ))}
         </div>
       </section>
     </div>

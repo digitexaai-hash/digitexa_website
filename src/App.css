@@ -619,7 +619,7 @@
 /* Hero Grid & Features Layout Extensions */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1fr 1.1fr;
   gap: 48px;
   align-items: center;
   margin: 40px auto 80px;
@@ -638,9 +638,9 @@
 
 .hero-image-wrap {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px var(--border-glow);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4), 0 0 40px var(--border-glow);
   border: 1px solid var(--border-color);
   transition: transform var(--transition-slow), box-shadow var(--transition-slow);
 }

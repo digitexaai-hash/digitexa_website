@@ -4,13 +4,30 @@ import { Shield, Sparkles, Smartphone, Code, Lightbulb, Compass, Bolt } from 'lu
 export default function WebsiteSolutions() {
   return (
     <div className="container animate-fade-in">
-      <div className="section-title-wrap">
-        <div className="hero-tagline">Development Services</div>
-        <h1 className="section-title">Website Solutions</h1>
-        <p className="section-desc">
-          High-fidelity, ultra-fast websites engineered to support business growth and establish professional credibility.
-        </p>
-      </div>
+      <section className="hero-grid" style={{ marginBottom: '60px' }}>
+        <div className="hero-section">
+          <div className="hero-tagline">Web Development</div>
+          <h1 className="section-title" style={{ fontSize: '2.75rem' }}>Next-Generation <br /><span className="gradient-text">Web Experiences</span></h1>
+          <p className="section-desc" style={{ marginLeft: 0 }}>
+            We craft sleek, conversion-focused websites that blend modern design, lightning-fast performance, and seamless user experiences—helping brands stand out, engage customers, and scale with confidence.
+          </p>
+        </div>
+        <div className="glass-card" style={{ padding: '32px', textAlign: 'center', border: '1px solid var(--border-glow)' }}>
+          <div style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)', borderRadius: '16px', width: '72px', height: '72px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', margin: '0 auto 20px' }}>
+            <Code size={32} />
+          </div>
+          <h3 style={{ fontSize: '1.25rem', marginBottom: '12px' }}>Modern Tech Stack</h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>React</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Vite</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>GSAP</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Node.js</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Tailwind</span>
+            <span style={{ padding: '6px 14px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}>Firebase</span>
+          </div>
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '20px' }}>Every project ships with modular architecture, zero legacy bloat, and CDN-ready deployments.</p>
+        </div>
+      </section>
 
       {/* Main Pillars of development */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px', marginBottom: '60px' }}>
